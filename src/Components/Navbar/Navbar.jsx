@@ -6,7 +6,7 @@ function Navbar() {
   return (
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <div className="navBar">
-    <h1 className="logo">AA</h1>
+    <h1 className="logo">Pashupati Planers</h1>
     </div>
         <InputBase placeholder="Search events" />
     <div className="Navbar-container">
