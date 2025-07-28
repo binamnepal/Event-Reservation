@@ -1,0 +1,65 @@
+
+.Navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #4a90e2;
+  transform: scale(1.05);
+}
+
+
+#Navbar-button {
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#Navbar-button a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#Navbar-button:hover {
+  background-color: #357ABD;
+  transform: scale(1.05);
+}
+
+
+.MuiToolbar-root {
+  padding: 10px 20px !important;
+}
+
+
+.MuiInputBase-root {
+  background: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 200px;
+  transition: box-shadow 0.3s ease;
+}
+
+.MuiInputBase-root:focus-within {
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
