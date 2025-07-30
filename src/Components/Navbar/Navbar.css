@@ -63,21 +63,21 @@
 .MuiInputBase-root:focus-within {
   box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
 }
-/* Container for logo and brand name */
+
 .navBar {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Logo image */
+
 .logo-img {
   height: 90px;
   width: 80px;
   object-fit: contain;
 }
 
-/* Logo text */
+
 .logo-text {
   font-size: 1.6rem;
   font-weight: 600;
@@ -85,7 +85,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Optional: link styling reset */
 .logo-link {
   text-decoration: none;
   display: flex;
