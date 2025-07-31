@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react"; // Add this import
 import Navbar from "./Components/Navbar/Navbar";
 import Login from "./Components/Login/Login";
-import Home from "./Components/Home/home";
+import Home from "./Components/Home/Home-from";
 import About from "./Components/About/About";      
 import Contact from "./Components/Contact/Contact"; 
 import ImageSlider from "./Imageslider/ImageSlider";
