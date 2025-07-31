@@ -1,0 +1,184 @@
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.category-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: blue  ;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100px;
+}
+
+.category-icon span {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.category-icon.active,
+.category-icon:hover {
+  background-color: red;
+  transform: scale(1.05);
+}
+
+.event-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.event-card {
+  background-color: white;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.event-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.event-card ul {
+  padding-left: 1rem;
+}
+
+.event-card li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.event-card li span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.event-card a {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-weight: 500;
+  color: #7c3aed;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.event-card a:hover {
+  color: #5b21b6;
+}
+
+.bottom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.bottom-nav a:hover {
+  color: #ef4444;
+}
+.event-card li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: red;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.event-card li strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.event-card li span {
+  display: inline-block;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.event-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.event-card a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-weight: 600;
+  color: #7c3aed;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.event-card a:hover {
+  color: #5b21b6;
+  text-decoration: underline;
+  letter-spacing: 0.3px;
+}
+.text-3xl {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #1a1a1a; /* Dark gray for better readability */
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.text-3xl::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b4a, #4a6bff); /* Gradient matching your theme */
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* For the Nepal flag emoji */
+.text-3xl::before {
+  content: "🇳🇵";
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+/* Hover effects */
+.text-3xl:hover {
+  color: #4a6bff; /* Changes to your brand blue on hover */
+  transition: color 0.3s ease;
+}
+
+.text-3xl:hover::after {
+  background: linear-gradient(90deg, #4a6bff, #ff6b4a); /* Reversed gradient on hover */
+  transition: background 0.3s ease;
+}

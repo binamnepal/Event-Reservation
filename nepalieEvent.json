@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Music",
+    "icon": "microphone",
+    "events": [
+      { "title": "Nepal Music Festival - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Jazzmandu - Jazz Festival, Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Pokhara Street Festival - Live Performances", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Himalayan Blues Night - Lalitpur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Nightlife",
+    "icon": "cocktail",
+    "events": [
+      { "title": "Club Fahrenheit DJ Night - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Purple Haze Rock Night - Thamel", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Full Moon Party - Pokhara Lakeside", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Bajeko Lounge EDM Party - Lalitpur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Comedy",
+    "icon": "microphone",
+    "events": [
+      { "title": "Stand-up by ComicSansar - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Open Mic Comedy Night - Pokhara", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "LOL Evening at The Comedy Club - Lalitpur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Kasto Funny Live - Bhaktapur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Food & Drink",
+    "icon": "cocktail",
+    "events": [
+      { "title": "Kathmandu Food Carnival", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Newari Cuisine Festival - Bhaktapur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Street Food Mela - Lalitpur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Beer & BBQ Fest - Pokhara", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Sports",
+    "icon": "microphone",
+    "events": [
+      { "title": "Everest Marathon - Namche Bazaar", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Pokhara Triathlon", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Mountain Bike Race - Mustang", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Kathmandu Ultra Run", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Festivals",
+    "icon": "cocktail",
+    "events": [
+      { "title": "Indra Jatra - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Holi Celebration - Terai Region", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Tihar Lights Festival - All over Nepal", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Bisket Jatra - Bhaktapur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Conferences",
+    "icon": "microphone",
+    "events": [
+      { "title": "TechKraft Conference - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Startup Mela - Lalitpur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "YouthSpeak Forum - Pokhara", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Women in Tech Summit - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  },
+  {
+    "name": "Workshops",
+    "icon": "cocktail",
+    "events": [
+      { "title": "Photography Workshop - Patan", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Handicraft Making - Bhaktapur", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Digital Marketing Bootcamp - Kathmandu", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" },
+      { "title": "Yoga & Wellness Retreat - Pokhara", "hasTickets": true, "buyLink": "https://jazzmandu.org/tickets" }
+    ]
+  }
+]

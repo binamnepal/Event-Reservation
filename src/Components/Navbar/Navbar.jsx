@@ -13,9 +13,6 @@ function Navbar() {
         </Link>
         <h1 className="logo-text">Pashupati Planners</h1>
       </div>
-
-      <InputBase placeholder="Search events" />
-
       <div className="Navbar-container">
         <nav className="navbar-links">
           <Link to="/">Home</Link>
