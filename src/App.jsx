@@ -31,6 +31,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+       <Route path="/events/:categoryName" element={<Nepalievents />}/>
+
       </Routes>
 
       {/* Add SearchModal here - will render when isSearchOpen is true */}

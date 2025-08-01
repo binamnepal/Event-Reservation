@@ -1,84 +1,91 @@
-import React, { useState } from "react";
-import { Mic, Martini } from "lucide-react";
-import nepaliEvents from "../../../nepalieEvent.json"; // Make sure this file is updated
-import "./nepalievent.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import eventData from '../../../nepalieEvent.json';
+import './nepalievent.css';
 
-// Icon mapping
-const iconMap = {
-  microphone: <Mic size={32} className="text-red-600" />,
-  cocktail: <Martini size={32} className="text-red-600" />,
-};
+const Nepalievents = () => {
+  const [activeCategory, setActiveCategory] = useState('Music');
+  const currentEvents = eventData.find(cat => cat.name === activeCategory)?.events || [];
 
-const NepaliEvents = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleClick = (categoryName) => {
-    setSelectedCategory(categoryName === selectedCategory ? null : categoryName);
-    const element = document.getElementById(categoryName);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  const getCategoryDescription = (category) => {
+    const descriptions = {
+      "Music": "Experience the vibrant music scene of Nepal with live performances across genres",
+      "Nightlife": "Discover Kathmandu's hottest clubs and Pokhara's lakeside parties",
+      "Comedy": "Laugh out loud with Nepal's funniest comedians and improv acts",
+      "Food & Drink": "Taste Nepal's diverse culinary traditions at food festivals",
+      "Sports": "Participate or watch exciting sporting events across Nepal",
+      "Festivals": "Celebrate Nepal's rich cultural heritage at traditional festivals",
+      "Conferences": "Learn from experts at professional and academic conferences",
+      "Workshops": "Develop new skills through hands-on workshops and classes"
+    };
+    return descriptions[category] || `Explore ${category} events in Nepal`;
   };
 
-  // Filter to selected category only
-  const filteredEvents = selectedCategory
-    ? nepaliEvents.filter((item) => item.name === selectedCategory)
-    : [];
-
   return (
-    <div className="p-6 max-w-6xl mx-auto font-sans">
-      <h2 className="text-3xl">Explore Live Events in Nepal 🇳🇵</h2>
+    <div className="all-events-page">
+      {/* Hero Section */}
+      <div className="hero-section">
+        <h1>Explore Live Events in Nepal <span className="np-flag">NP</span></h1>
+        <p className="tagline">Discover amazing experiences across the country</p>
+      </div>
 
-      {/* Top Category Icons */}
-      <div className="icon-grid">
-        {nepaliEvents.map((category, index) => (
+      {/* Category Navigation */}
+      <div className="category-nav">
+        {eventData.map(category => (
           <button
-            key={index}
-            onClick={() => handleClick(category.name)}
-            className={`category-icon ${
-              selectedCategory === category.name ? "active" : ""
-            }`}
+            key={category.name}
+            className={`category-btn ${activeCategory === category.name ? 'active' : ''}`}
+            onClick={() => setActiveCategory(category.name)}
           >
-            {iconMap[category.icon]}
-            <span>{category.name}</span>
+            <i className={`fas fa-${category.icon}`}></i> {category.name}
           </button>
         ))}
       </div>
 
-      {/* Event Cards - only if a category is selected */}
-      <div className="event-grid mt-8">
-        {filteredEvents.map((category, index) => (
-          <div id={category.name} key={index} className="event-card">
-            <div className="flex items-center gap-2 mb-2 text-red-600">
-              {iconMap[category.icon]}
-              <h3 className="text-xl font-semibold">{category.name}</h3>
+      {/* Current Category Section */}
+      <div className="current-category">
+        <h2 className="category-title">{activeCategory} Events</h2>
+        <p className="category-description">
+          {getCategoryDescription(activeCategory)}
+        </p>
+        
+        <div className="events-grid">
+          {currentEvents.map((event, index) => (
+            <div key={index} className="event-card">
+              <div className="event-image">
+                <img 
+                  src={event.image} 
+                  alt={event.title}
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = 'https://via.placeholder.com/500x300?text=Event+Image';
+                  }}
+                />
+                {event.hasTickets && (
+                  <div className="ticket-badge">Tickets Available</div>
+                )}
+              </div>
+              <div className="event-details">
+                <h3>{event.title.split(' - ')[0]}</h3>
+                <div className="event-meta">
+                  <span><i className="fas fa-map-marker-alt"></i> {event.title.split(' - ')[1] || 'Nepal'}</span>
+                  {event.date && <span><i className="fas fa-calendar-alt"></i> {new Date(event.date).toLocaleDateString()}</span>}
+                </div>
+                <a 
+                  href={event.buyLink} 
+                  className="buy-btn"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Buy Tickets <i className="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <ul className="list-disc list-inside text-gray-700">
-              {category.events
-                .filter((event) => event.hasTickets)
-                .map((event, idx) => (
-                  <li key={idx} className="flex justify-between items-center gap-4 my-2">
-                    <div>
-                      <span className="font-medium">{event.title}</span>
-                      <span className="text-sm text-green-600 ml-2">Tickets Available</span>
-                    </div>
-                    <a
-                      href={event.buyLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-red-600 text-white text-sm px-3 py-1 rounded hover:bg-red-700"
-                    >
-                      Buy Ticket
-                    </a>
-                  </li>
-                ))}
-            </ul>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
-      </div>
+    </div>
   );
 };
 
-export default NepaliEvents;
+export default Nepalievents;
