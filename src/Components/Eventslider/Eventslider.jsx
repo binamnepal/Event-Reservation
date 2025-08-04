@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight, FaTicketAlt } from 'react-icons/fa';
 import { FiClock, FiMapPin } from 'react-icons/fi';
 import './EventsSlider.css';
@@ -7,24 +6,24 @@ import eventData from '../../../nepalieEvent.json';
 
 const EventsSlider = () => {
   const [activeCategory, setActiveCategory] = useState('Music');
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
   const currentEvents = eventData.find(cat => cat.name === activeCategory)?.events || [];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === currentEvents.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? currentEvents.length - 1 : prev - 1));
-  };
-
+  // Auto-rotate slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
+      setCurrentIndex(prev => (prev + 1) % currentEvents.length);
     }, 5000);
     return () => clearInterval(interval);
   }, [currentEvents.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex(prev => (prev + 1) % currentEvents.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(prev => (prev - 1 + currentEvents.length) % currentEvents.length);
+  };
 
   return (
     <section className="events-slider">
@@ -37,7 +36,7 @@ const EventsSlider = () => {
               className={`category-tab ${activeCategory === category.name ? 'active' : ''}`}
               onClick={() => {
                 setActiveCategory(category.name);
-                setCurrentSlide(0);
+                setCurrentIndex(0);
               }}
             >
               {category.name}
@@ -55,10 +54,10 @@ const EventsSlider = () => {
           {currentEvents.map((event, index) => (
             <div
               key={index}
-              className={`slide ${index === currentSlide ? 'active' : ''}`}
+              className={`slide ${index === currentIndex ? 'active' : ''}`}
               style={{
-                transform: `translateX(${100 * (index - currentSlide)}%)`,
-                opacity: index === currentSlide ? 1 : 0.7,
+                transform: `translateX(${-100 * currentIndex}%)`,
+                opacity: index === currentIndex ? 1 : 0
               }}
             >
               <div className="event-card">
@@ -112,8 +111,8 @@ const EventsSlider = () => {
         {currentEvents.map((_, index) => (
           <button
             key={index}
-            className={`dot ${index === currentSlide ? 'active' : ''}`}
-            onClick={() => setCurrentSlide(index)}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>

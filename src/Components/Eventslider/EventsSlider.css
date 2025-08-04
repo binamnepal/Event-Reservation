@@ -63,19 +63,18 @@
 .slider-container {
   position: relative;
   overflow: hidden;
-  padding: 1rem 0;
+  height: 400px;
 }
 
 .slider-track {
   display: flex;
+  height: 100%;
   transition: transform 0.5s ease;
-  min-height: 400px;
 }
 
 .slide {
   flex: 0 0 100%;
-  transition: var(--transition);
-  padding: 0 1rem;
+  transition: opacity 0.5s ease;
 }
 
 .event-card {
@@ -83,10 +82,11 @@
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  transition: var(--transition);
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 .event-image {
@@ -99,11 +99,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.event-card:hover .event-image img {
-  transform: scale(1.05);
 }
 
 .ticket-badge {
@@ -129,15 +124,15 @@
 }
 
 .event-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--dark);
 }
 
 .event-meta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
   color: var(--gray);
 }
@@ -145,8 +140,8 @@
 .meta-item {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  font-size: 0.875rem;
+  gap: 0.5rem;
+  font-size: 1rem;
 }
 
 .buy-btn {
@@ -164,8 +159,6 @@
 
 .buy-btn:hover {
   background-color: var(--primary-light);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .slider-arrow {
@@ -184,7 +177,6 @@
   box-shadow: var(--shadow-md);
   z-index: 10;
   transition: var(--transition);
-  color: var(--dark);
 }
 
 .slider-arrow:hover {
@@ -193,11 +185,11 @@
 }
 
 .left-arrow {
-  left: 0;
+  left: 1rem;
 }
 
 .right-arrow {
-  right: 0;
+  right: 1rem;
 }
 
 .slider-dots {
@@ -208,8 +200,8 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: var(--gray);
   border: none;
@@ -238,8 +230,12 @@
     font-size: 0.875rem;
   }
   
-  .event-image {
-    height: 200px;
+  .event-title {
+    font-size: 1.25rem;
+  }
+  
+  .meta-item {
+    font-size: 0.875rem;
   }
   
   .slider-arrow {
