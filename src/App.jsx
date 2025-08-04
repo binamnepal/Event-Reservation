@@ -6,8 +6,8 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";      
 import Contact from "./Components/Contact/Contact"; 
 import ImageSlider from "./Imageslider/ImageSlider";
-import Nepalievents from "./Components/Nepalievent/Nepalievent";
 import SearchModal from "./Components/Search/SearchModel/SearchModal"; // Add this import
+import EventsSlider from "./Components/Eventslider/Eventslider";
 import SearchIcon from "./Components/Search/SearchIcons/SearchIcon"; // Add this import
 
 function App() {
@@ -25,14 +25,12 @@ function App() {
           <>
             <Home />
             <ImageSlider />
-            <Nepalievents />
+            <EventsSlider/> 
           </>
         } />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-       <Route path="/events/:categoryName" element={<Nepalievents />}/>
-
       </Routes>
 
       {/* Add SearchModal here - will render when isSearchOpen is true */}

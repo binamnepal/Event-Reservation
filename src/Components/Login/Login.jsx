@@ -42,7 +42,7 @@ function Login() {
     if (id === "password") setPassword(value);
 
     if (email.trim() !== "" && password.trim() !== "") {
-      setBtnText("✅  good job!");
+      setBtnText("Login");
       setBtnClass("success");
       setBtnStyle({
         position: "absolute",
@@ -58,10 +58,10 @@ function Login() {
 
   const handleLogin = () => {
     if (email.trim() !== "" && password.trim() !== "") {
-      alert("✅ Login Successful!");
+      alert("Login Successful!");
       navigate("/");
     } else {
-      alert("❌ Please fill the details first!");
+      alert("Please fill the details first!");
     }
   };
 

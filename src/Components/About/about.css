@@ -1,73 +1,202 @@
-/* src/index.css */
-
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
+/* about.css */
+:root {
+  /* Color Palette */
+  --primary: #2563eb;
+  --primary-light: #3b82f6;
+  --secondary: #f59e0b;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --white: #ffffff;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  
+  /* Typography */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  
+  /* Borders */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
 }
 
-header, footer {
-  background-color: #2c3e50;
-  color: white;
+/* Base Styles */
+.about-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: var(--white);
+  padding: var(--space-2xl) 0;
   text-align: center;
-  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-h1, h2, h3, h4 {
-  margin-bottom: 15px;
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: var(--light);
+  transform: skewY(-2deg);
+  z-index: 1;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 900px;
+.about-hero-title {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
+  position: relative;
+  z-index: 2;
+  text-shadow: var(--shadow-sm);
+}
+
+.about-hero-subtitle {
+  font-size: var(--text-xl);
+  opacity: 0.9;
+  max-width: 600px;
   margin: 0 auto;
-  background-color: white;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  position: relative;
+  z-index: 2;
 }
 
-button {
-  background-color: #2980b9;
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* About Content */
+.about-content {
+  padding: var(--space-2xl) var(--space-md);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
-button:hover {
-  background-color: #3498db;
-}
-
-.grid {
+.about-content-inner {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-lg);
 }
 
-.card {
-  background: #fff;
-  padding: 20px;
-  flex: 1 1 250px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.about-content-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
   text-align: center;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
 }
 
-@media (max-width: 600px) {
-  section {
-    padding: 20px 10px;
+.about-text {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+/* Vision & Mission */
+.about-vision-mission {
+  background-color: var(--light);
+  padding: var(--space-2xl) var(--space-md);
+  position: relative;
+}
+
+.about-vision-mission-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.vision-mission-card {
+  background: var(--white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision-mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.vision-mission-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.vision-mission-title::before {
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background: var(--secondary);
+  border-radius: var(--radius-sm);
+}
+
+.vision-mission-text {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+/* Footer */
+.about-footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: var(--space-lg) 0;
+  margin-top: var(--space-2xl);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .about-vision-mission-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .grid {
-    flex-direction: column;
-  }
-  .card {
-    flex: 1 1 100%;
+  
+  .about-hero-title {
+    font-size: 3.5rem;
   }
 }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-content-inner > * {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.about-content-inner > *:nth-child(1) { animation-delay: 0.1s; }
+.about-content-inner > *:nth-child(2) { animation-delay: 0.2s; }
+.about-content-inner > *:nth-child(3) { animation-delay: 0.3s; }
+.about-content-inner > *:nth-child(4) { animation-delay: 0.4s; }
