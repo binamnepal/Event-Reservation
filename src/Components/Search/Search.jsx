@@ -47,8 +47,8 @@ const Search = () => {
   return (
     <div className="events-container">
       <header className="events-header">
-        <h1>FROMPOP BALLADS TOEMO ENCORES</h1>
-        <p className="tagline">Get Into Live Music</p>
+        <h1>Pashupati Planners</h1>
+        <p className="tagline">Get Into events</p>
       </header>
 
       <div className="search-section">
