@@ -52,7 +52,8 @@ const Search = () => {
       </header>
 
       <div className="search-section">
-        <h2>Explore Live Events in Nepal 🇳🇵</h2>
+        <h2>Explore Live Events in Nep
+          al 🇳🇵</h2>
         
         <div className="search-controls">
           <div className="search-input">
