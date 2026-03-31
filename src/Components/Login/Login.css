@@ -1,0 +1,127 @@
+:root {
+  --clr-primary: #4f46e5; /* Modern Purple/Blue */
+  --clr-white: #ffffff;
+  --clr-dark: #1f2937;
+  --clr-muted: #6b7280;
+  --clr-border: #e5e7eb;
+  --clr-surface: #f9fafb;
+  --radius-xl: 16px;
+  --radius-sm: 8px;
+  --font-display: 'Inter', sans-serif;
+  --transition: 0.2s ease;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6; /* Neutral light grey background */
+  font-family: var(--font-display);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--clr-white);
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-logo {
+  color: #fbbf24; /* Gold sparkle */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--clr-dark);
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left; /* Keep form labels aligned left */
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--clr-dark);
+}
+
+.login-field input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.login-field input:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.login-field__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-forgot {
+  font-size: 0.875rem;
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+.login-btn-wrap {
+  margin-top: 0.5rem;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-btn--warning {
+  background: #f3f4f6;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.login-signup {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--clr-muted);
+}
+
+.login-signup__link {
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: 600;
+}

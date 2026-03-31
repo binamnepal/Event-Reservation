@@ -1,0 +1,258 @@
+/* --- 1. GLOBAL REFINEMENTS (The "Gut" Palette) --- */
+:root {
+  --clr-brand-warm: #b5431a;      /* Rich Terracotta */
+  --clr-brand-gold: #c9973a;      /* Muted Gold */
+  --clr-cream-light: #faf7f5;     /* Champagne Silk */
+  --clr-cream-dark: #f0e8e2;      /* Sandstone */
+  --clr-charcoal: #1a1817;        /* Deep Earthy Black */
+  --clr-white: #ffffff;
+  --clr-mid: #5a5450;
+  --clr-muted: #8c8580;
+  --clr-border: #e8d5ca;
+  --clr-surface: #fcfaf8;
+  
+  --radius-lg: 12px;
+  --shadow-premium: 0 20px 40px -15px rgba(26, 24, 23, 0.12);
+  --transition-slow: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  
+  --font-display: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+.about { 
+  font-family: var(--font-body); 
+  color: var(--clr-charcoal);
+  background-color: var(--clr-white);
+}
+
+/* --- 2. HERO SECTION (Texture & Elegance) --- */
+.about-hero {
+  background: linear-gradient(160deg, var(--clr-cream-light) 0%, var(--clr-cream-dark) 100%);
+  padding: 10rem 1.5rem 7rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Organic paper texture overlay */
+.about-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  pointer-events: none;
+}
+
+.about-hero__inner { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  position: relative; 
+  z-index: 2;
+}
+
+.about-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-brand-warm);
+  margin-bottom: 1.5rem;
+}
+
+.about-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 700;
+  color: var(--clr-charcoal);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+}
+
+.about-hero__title em { 
+  color: var(--clr-brand-gold); 
+  font-style: italic; 
+  font-weight: 400;
+  font-family: serif; /* Gives that "designer" contrast */
+}
+
+.about-hero__sub {
+  font-size: 1.15rem;
+  color: var(--clr-mid);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- 3. MISSION & VISION (High Contrast) --- */
+.about-mv { 
+  padding: 8rem 1.5rem; 
+  background: var(--clr-charcoal); 
+}
+
+.about-mv__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-mv__card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 4rem 3rem;
+  transition: var(--transition-slow);
+}
+
+.about-mv__card:hover { 
+  background: rgba(255, 255, 255, 0.06); 
+  transform: translateY(-10px);
+}
+
+.about-mv__card--gold { 
+  border-color: rgba(201, 151, 58, 0.3); 
+}
+
+.about-mv__icon { 
+  font-size: 2.5rem; 
+  margin-bottom: 1.5rem; 
+  display: block;
+}
+
+.about-mv__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.about-mv__text { 
+  color: rgba(255, 255, 255, 0.5); 
+  font-size: 1rem; 
+  line-height: 1.8; 
+}
+
+/* --- 4. VALUES SECTION (Boutique Look) --- */
+.about-values { padding: 8rem 1.5rem; background: var(--clr-white); }
+
+.about-section-header { text-align: center; margin-bottom: 5rem; }
+
+.about-tag {
+  color: var(--clr-brand-gold);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+}
+
+.about-values__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-value-card {
+  padding: 3.5rem 2.5rem;
+  background: var(--clr-surface);
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: var(--transition-slow);
+}
+
+.about-value-card:hover { 
+  transform: translateY(-15px); 
+  box-shadow: var(--shadow-premium);
+  border-bottom-color: var(--clr-brand-gold);
+}
+
+.about-value-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  filter: grayscale(1) sepia(1) saturate(5) hue-rotate(330deg); /* Bronze effect */
+}
+
+.about-value-title {
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* --- 5. TEAM SECTION (Modern Square Grid) --- */
+.about-team { padding: 8rem 1.5rem; background: var(--clr-cream-light); }
+
+.about-team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-team-card {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  border-radius: 0; /* Sharp for luxury look */
+  transition: var(--transition-slow);
+}
+
+.about-team-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-premium);
+}
+
+.about-team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 15px; /* Squircle */
+  background: var(--clr-cream-dark);
+  color: var(--clr-brand-warm);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- 6. CTA (The "Gut" Closer) --- */
+.about-cta {
+  background: var(--clr-charcoal);
+  padding: 12rem 1.5rem;
+  text-align: center;
+  /* Modern sharp slant */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.about-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.about-cta-btn {
+  padding: 20px 50px;
+  background: var(--clr-brand-warm);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+  border-radius: 0;
+  transition: var(--transition-slow);
+}
+
+.about-cta-btn:hover {
+  background: #fff;
+  color: var(--clr-brand-warm);
+  transform: translateY(-5px);
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 900px) {
+  .about-mv__inner, .about-values__grid { grid-template-columns: 1fr; }
+  .about-team__grid { grid-template-columns: 1fr 1fr; }
+  .about-hero { padding: 8rem 1.5rem 4rem; }
+}

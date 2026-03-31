@@ -1,0 +1,38 @@
+.search-fab {
+  position: fixed;
+  bottom: 2.5rem; /* Increased slightly for better 'gut' spacing */
+  right: 2.5rem;
+  z-index: 1000; /* Higher z-index to stay on top of all elements */
+  width: 60px;   /* Slightly larger for a bolder look */
+  height: 60px;
+  border-radius: 50%;
+  
+  /* Use the direct hex if the variable is failing */
+  background: #b5431a; 
+  color: #ffffff !important; /* Forces icon to be white */
+  
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Bolder shadow for more 'gut' depth */
+  box-shadow: 0 10px 25px rgba(181, 67, 26, 0.4); 
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Ensure the icon inside is sized correctly */
+.search-fab svg, 
+.search-fab i {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  fill: currentColor;
+}
+
+.search-fab:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: #1a1817; /* Changes to Charcoal on hover for premium feel */
+  box-shadow: 0 15px 35px rgba(26, 24, 23, 0.3);
+}
